@@ -1,0 +1,16 @@
+PODS:
+  - RJCategoryKit (0.1.0)
+
+DEPENDENCIES:
+  - RJCategoryKit (from `../`)
+
+EXTERNAL SOURCES:
+  RJCategoryKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  RJCategoryKit: 361925fdef10c1ef3be2da23642e3ad59d498905
+
+PODFILE CHECKSUM: 2467bf8683f33e8037d07b47f9ce6b0276a7b0a2
+
+COCOAPODS: 1.8.4

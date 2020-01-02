@@ -1,0 +1,6 @@
+framework module RJCategoryKit {
+  umbrella header "RJCategoryKit-umbrella.h"
+
+  export *
+  module * { export * }
+}
