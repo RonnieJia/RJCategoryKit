@@ -12,6 +12,7 @@
 
 #import "NSArray+Extension.h"
 #import "NSMutableArray+RJArray.h"
+#import "NSMutableDictionary+RJSafe.h"
 #import "RJSwizzlingDefine.h"
 #import "UIView+Frame.h"
 

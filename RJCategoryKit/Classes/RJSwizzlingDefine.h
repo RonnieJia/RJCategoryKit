@@ -2,7 +2,6 @@
 
 #ifndef RJSwizzlingDefine_h
 #define RJSwizzlingDefine_h
-
 #import <objc/runtime.h>
 
 static inline void swizzling_exchangeMethod(Class clazz ,SEL originalSelector, SEL swizzledSelector) {

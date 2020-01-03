@@ -14,20 +14,27 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         Class cla = [[NSMutableArray array] class];
-        swizzling_exchangeMethod(cla, @selector(addObject:), @selector(rj_addObject:));
-        swizzling_exchangeMethod(cla, @selector(removeObjectAtIndex:), @selector(rj_removeItemAtIndex:));
+        swizzling_exchangeMethod(cla, @selector(addObject:), @selector(rj_maddObject:));
+        swizzling_exchangeMethod(cla, @selector(removeObjectAtIndex:), @selector(rj_mremoveItemAtIndex:));
+        swizzling_exchangeMethod(cla, @selector(objectAtIndex:), @selector(rj_mobjectAtIndex:));
     });
 }
 
-- (void)rj_removeItemAtIndex:(NSInteger)index {
+- (void)rj_mremoveItemAtIndex:(NSInteger)index {
     if (index<self.count) {
-        [self rj_removeItemAtIndex:index];
+        [self rj_mremoveItemAtIndex:index];
     }
 }
-- (void)rj_addObject:(id)anObject {
+- (void)rj_maddObject:(id)anObject {
     if (anObject != nil) {
-        [self rj_addObject:anObject];
+        [self rj_maddObject:anObject];
     }
 }
 
+- (id)rj_mobjectAtIndex:(NSInteger)index {
+    if (index < self.count) {
+        return [self rj_mobjectAtIndex:index];
+    }
+    return nil;
+}
 @end

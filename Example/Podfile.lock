@@ -1,5 +1,5 @@
 PODS:
-  - RJCategoryKit (1.0.3)
+  - RJCategoryKit (1.0.4)
 
 DEPENDENCIES:
   - RJCategoryKit (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  RJCategoryKit: eef3c2d3ad84e30445985b380d6aab43e2f0e031
+  RJCategoryKit: 25c30f62c5be08265a86a1d2ee756d9eb4788415
 
 PODFILE CHECKSUM: 2467bf8683f33e8037d07b47f9ce6b0276a7b0a2
 

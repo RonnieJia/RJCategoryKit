@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'RJCategoryKit'
-  s.version          = '1.0.3'
+  s.version          = '1.0.4'
   s.summary          = 'RJCategory easy code.'
 
 # This description is used to generate tags and improve search results.
@@ -39,4 +39,5 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+#  s.dependency 'JRSwizzle'
 end
