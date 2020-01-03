@@ -10,7 +10,10 @@
 #endif
 #endif
 
+#import "NSArray+Extension.h"
 #import "NSMutableArray+RJArray.h"
+#import "RJSwizzlingDefine.h"
+#import "UIView+Frame.h"
 
 FOUNDATION_EXPORT double RJCategoryKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char RJCategoryKitVersionString[];

@@ -7,16 +7,23 @@
 //
 
 #import "NSMutableArray+RJArray.h"
-#import <objc/runtime.h>
+#import "RJSwizzlingDefine.h"
 
 @implementation NSMutableArray (RJArray)
 + (void)load {
-    Class cla = [[[NSMutableArray alloc] init] class];
-    Method originAdd = class_getInstanceMethod(cla, @selector(addObject:));
-    Method rjAdd = class_getInstanceMethod(cla, @selector(rj_addObject:));
-    method_exchangeImplementations(originAdd, rjAdd);
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        Class cla = [[NSMutableArray array] class];
+        swizzling_exchangeMethod(cla, @selector(addObject:), @selector(rj_addObject:));
+        swizzling_exchangeMethod(cla, @selector(removeObjectAtIndex:), @selector(rj_removeItemAtIndex:));
+    });
 }
 
+- (void)rj_removeItemAtIndex:(NSInteger)index {
+    if (index<self.count) {
+        [self rj_removeItemAtIndex:index];
+    }
+}
 - (void)rj_addObject:(id)anObject {
     if (anObject != nil) {
         [self rj_addObject:anObject];
